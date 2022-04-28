@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Web釣書テンプレート</title>
+  <meta name="description" content="Web上で簡単に作成可能な、釣書サービスです。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- [if lt IE 9] -->
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <!-- [endif] -->
+  <script src="./js/main.js"></script>
+</head>
+
+<body>
+  <!----- header
+  <header>ヘッダー</header>
+  <nav>ナビ</nav> 
+  ----->
+
+  <!----- main ----->
+
+  <div class="print-area">
+    <h1 id="per_his_title">釣書</h1>
+    <div class="per_his_name">
+      <span id="01" class="_name">名字名前</span>
+      <span>（</span>
+      <span id="02" class="_hurigana">フリガナ</span>
+      <span>）</span>
+    </div>
+    <div class="per_his_birth">
+      <span id="03" class="_birth">生年月日</span>
+    </div>
+    <div id="per_his_contents">
+
+
+      <div class="profile_box">
+        <span class="profile_head">
+          本籍地
+        </span>
+        <span id="10" class="profile_body"> </span>
+      </div>
+
+      <div class="profile_box">
+        <span class="profile_head">
+          現住所
+        </span>
+        <span id="20" class="profile_body"></span>
+      </div>
+
+      <div class="profile_box">
+        <div class="profile_head">
+          学歴
+        </div>
+        <div id="30" class="profile_body" style="margin-top: 110px;"></div>
+      </div>
+
+      <div class="profile_box">
+        <div class="profile_head">
+          職歴
+        </div>
+        <div id="40" class="profile_body" style="margin-top: 110px;"></div>
+      </div>
+
+      <div class="profile_box">
+        <span class="profile_head">
+          資格
+        </span>
+        <span id="50" class="profile_body"> </span>
+      </div>
+
+      <div class="profile_box">
+        <span class="profile_head">
+          趣味
+        </span>
+        <span id="60" class="profile_body"> </span>
+      </div>
+
+      <div class="profile_box">
+        <span class="profile_head">
+          特技
+        </span>
+        <span id="70" class="profile_body"> </span>
+      </div>
+
+      <div class="profile_box">
+        <span class="profile_head">
+          宗教
+        </span>
+        <span id="80" class="profile_body"> </span>
+      </div>
+
+      <div class="profile_box">
+        <span class="profile_head">
+          身長
+        </span>
+        <span id="90" class="profile_body"> </span>
+        <span class="profile_body">センチ</span>
+      </div>
+
+      <div class="profile_box">
+        <span class="profile_head">
+          体重
+        </span>
+        <span id="100" class="profile_body"> </span>
+        <span class="profile_body">キロ</span>
+      </div>
+
+      <div class="profile_box">
+        <span class="profile_head">
+          健康状態
+        </span>
+        <span id="110" class="profile_body"> </span>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!----- /main ----->
+  <!----- 
+    
+    ----->
+  <div id="input_area">
+    <form onsubmit="return false;">
+      <input type="radio" id="hide" name="btn-main" onclick="buttonClick()">XMLで入力
+      <input type="radio" id="disp" name="btn-main" onclick="buttonClick()" checked>すぐ入力
+
+      <div id="sub-form">
+        <input name="_name" class="input_box" type="text" placeholder="名前を入力" value="名字名前">
+        <input name="_hurigana" class="input_box" type="text" placeholder="フリガナを入力" value="ミョウジナマエ">
+        <input name="_seinengappi" class="input_box" type="text" placeholder="生年月日を入力" value="令和○○年○○月○○日生">
+        <input name="_honseki" class="input_box" type="text" placeholder="本籍地を入力" value="○○県○○市○○区">
+        <input name="_genjusho" class="input_box" type="text" placeholder="現住所を入力" value="○○県○○市○○区">
+        <input name="_gakureki" class="input_box" type="text" placeholder="学歴を入力" value="平成○○年○○月 ○○大学○○学科 卒業">
+        <input name="_syokureki" class="input_box" type="text" placeholder="職歴を入力" value="平成○○年○○月 株式会社○○ ○○部勤務 現在に至る">
+        <input name="_shikaku" class="input_box" type="text" placeholder="資格を入力" value="○○取得、○○合格">
+        <input name="_syumi" class="input_box" type="text" placeholder="趣味を入力" value="">
+        <input name="_tokugi" class="input_box" type="text" placeholder="特技を入力" value="">
+        <input name="_syuukyou" class="input_box" type="text" placeholder="宗教を入力" value="スパゲッティモンスター教">
+        <input name="_sintyou" class="input_box" type="text" placeholder="身長を入力" value="105">
+        <input name="_taijuu" class="input_box" type="text" placeholder="体重を入力" value="70">
+        <input name="_kenkoujoutai" class="input_box" type="text" placeholder="健康状態を入力" value="良好">
+        <input type="button" value="釣書の印刷" onclick="OnButtonClick();" />
+      </div>
+      <div id="cp-form">
+        <textarea id="text_box" class="text_box" type="text" placeholder="テキストを貼り付ける"></textarea>
+        <input type="button" value="釣書の印刷" onclick="OnButtonClick2();" />
+      </div>
+
+    </form>
+    <span><small>※印刷時に上下に印刷日時が表示されている場合は、印刷プロパティからオフにしてください</small></span>
+  </div>
+  <!----- footer
+  <footer>フッター</footer>
+  ----->
+</body>
+
+<!-- スクリプト置 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</html>
